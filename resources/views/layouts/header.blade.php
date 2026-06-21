@@ -1,6 +1,6 @@
   <header class="header">
     <div class="header_content">
-      <img src="{{ asset('img/Tokkilogo.png') }" alt="TokkiShop Logo" class="tokkilogo_img" width="150">
+      <img src="{{ asset('images/Tokkilogo.png') }" alt="TokkiShop Logo" class="tokkilogo_img" width="150">
       <nav class="nav pt-4">
         <ul class="nav_list">
           <li class="nav_items">

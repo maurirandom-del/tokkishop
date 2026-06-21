@@ -18,18 +18,20 @@
 
     <link rel="stylesheet" href="{{ asset('css/loginstyles.css') }}">
 </head>
+
 <body class="login-body">
     <div class="wrapper">
-        <form action="">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
             <h1>Entrar</h1>
             <div class="input-box">
-                <input type="text" placeholder="Usuario" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required autofocus>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Contraseña" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
             </div>
             <div class="remember-forgot">
-                <label><input type="checkbox"> Recordarme</label>
+                <label><input type="checkbox" name="remember"> Recordarme</label>
                 <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
 

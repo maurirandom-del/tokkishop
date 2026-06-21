@@ -42,4 +42,15 @@ class Producto extends Model
     {
         return $this->belongsTo(Talla::class, 'id_talla', 'id_talla');
     }
+    
+    public function usuariosFavoritos()
+    {
+        return $this->belongsToMany(User::class, 'favoritos', 'producto_id', 'user_id');
+    }
+
+    public function enCarrito()
+    {
+        return $this->hasMany(Carrito::class, 'producto_id');
+    }
+
 }

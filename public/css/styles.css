@@ -76,12 +76,24 @@ h5 {
     color: rgb(117, 101, 106);
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
-    transition: all 0.4s;
+    transition: all 0.5s;
 }
 
 .nav_link:hover,
 .nav_link:focus {
     color: #F61067;
+}
+
+.nav-link-user {
+    text-decoration: none;
+    color: rgb(117, 101, 106);
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.5s;
+}
+
+.nav-link-user:hover,
+.nav-link-user:focus {
+    color: #F61067; 
 }
 
 /* ===== BARRA DE BÚSQUEDA ===== */
@@ -178,11 +190,35 @@ h5 {
     z-index: 10;
 }
 
+.btn-favorite-delate {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.726);
+    border: none;
+    color: #FBA71B;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
 .btn-favorite:hover {
     background-color: #ffffff;
     color: #ffeb3c;
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
+
+.btn-favorite-delate:hover {
+    background-color: #ffffff;
+    color: #e50e0eeb;
+    transform: scale(1.2);
+}
+
 
 .btn-delate {
     background-color: #e41616;
@@ -358,6 +394,46 @@ h5 {
     background-color: #8c68e8;
 }
 
+/* ===== ASIDE DEL CARRITO ===== */
+.carrito-aside {
+    background-color: #fff9fb;
+    border-left: 3px solid #F61067;
+    min-height: 100vh;
+}
+
+.carrito-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.carrito-box h2 {
+    color: #F61067;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.carrito-lista li {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 6px;
+    color: #444;
+}
+
+.carrito-lista li:last-child {
+    border: none;
+}
+
+.carrito-lista span {
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    .carrito-aside {
+        border-left: none;
+        border-top: 3px solid #F61067;
+        min-height: auto;
+    }
+}
+
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 650px) {
     .header_content {
@@ -388,7 +464,7 @@ h5 {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(images/mbvlogin.jpg) no-repeat;
+    background: url(https://i.ibb.co/jvxk8JCQ/mbv-1992.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }

@@ -1,34 +1,50 @@
   <header class="header">
     <div class="header_content">
-      <img src="https://i.ibb.co/1JP3RVLK/Tokkilogo.png" alt="TokkiShop Logo" class="tokkilogo_img" width="150">
+      <a href="{{ route('home') }}"><img src="https://i.ibb.co/1JP3RVLK/Tokkilogo.png" alt="TokkiShop Logo" class="tokkilogo_img" width="150"></a>
       <nav class="nav pt-4">
         <ul class="nav_list">
-          <li class="nav_items">
-            <a href="#" class="nav_link">Novedades</a>
+          <li class="nav_item">
+            <a href="{{ route('playeras.index') }}" class="nav_link">Playeras</a>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Playeras</a>
+            <a href="{{ route('hoodies.index') }}" class="nav_link">Hoodies</a>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Hoodies</a>
+            <a href="{{ route('jeans.index') }}" class="nav_link">Jeans</a>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Jeans</a>
+            <a href="{{ route('gorras.index') }}" class="nav_link">Gorras</a>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Gorras</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Accesorios</a>
+            <a href="{{ route('accesorios.index') }}" class="nav_link">Accesorios</a>
           </li> 
           <li class="nav_item">
-            <a href="#"><i class="fa-solid fa-star icon"></i></a>
-          </li>
+            <a href="{{ route('favoritos.index') }}"><i class="fa-solid fa-star icon"></i></a>
+          </li> 
           <li class="nav_item">
-            <a href="#"><i class="fa-solid fa-cart-shopping icon"></i></a>
+            <a href="{{ route('carrito.index') }}"><i class="fa-solid fa-cart-shopping icon"></i></a>
           </li>
-          <li class="nav_item">
-            <a href="/login"><i class="fa-solid fa-user icon"></i></a>
+          <li class="nav-item dropdown">
+            @auth
+              <a class="nav-link-user dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user icon"></i> {{ Auth::user()->name }}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                @role('admin')
+                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Panel de administración</a></li>
+                @endrole
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="dropdown-item text-danger" type="submit">Cerrar sesión</button>
+                  </form>
+                </li>
+              </ul>
+            @else
+              <a href="/login" class="nav-link"><i class="fa-solid fa-user icon"></i></a>
+            @endauth
           </li>
           <li>
             <div class="search_bar">

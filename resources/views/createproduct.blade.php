@@ -14,7 +14,7 @@
 
       <div class="col-md-4">
         <label for="descripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" id="descripcion" name="descripcion" rows="1" required></textarea>
+        <textarea class="form-control" id="descripcion" name="descripcion" id="editor" rows="1" required></textarea>
       </div>
 
       <div class="col-md-4">
@@ -70,3 +70,12 @@
   </div>
 </div>
 @endsection
+@push('scripts')
+    <script>
+      $(document).ready(function() {
+          $('.form-select').select2();
+      });
+
+      const quill = new Quill('#editor');
+    </script>
+@endpush

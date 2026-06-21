@@ -2,7 +2,7 @@
   
   @section('content')
   <div class="container text-center">
-    <img src="https://i.ibb.co/nM4H9N05/tokkibanner.gif" alt="banner animado tokkishop" class="bannertokki">
+    <img src="{{ asset('img/tokkibanner.gif') }}" alt="banner animado tokkishop" class="bannertokki">
   </div>
   <div class="container py-4">
     <h1 class="text-center mb-5">Catálogo de Productos</h1>

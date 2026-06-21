@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container text-center">
-  <img src="https://i.ibb.co/nM4H9N05/tokkibanner.gif" alt="banner animado tokkishop" class="bannertokki">
+  <img src="https://s13.gifyu.com/images/bdxac.gif" alt="banner animado tokkishop" class="bannertokki">
 </div>
 
 <div class="container py-4">
